@@ -1,0 +1,56 @@
+import Admin from "./pages/Admin";
+import {ADMIN_ROUTE, BASKET_ROUTE, DEVICE_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE, MAIN_ROUTE, PRIVATE_ROUTE, PRIVATE_ROUTE2} from "./utils/consts";
+import Basket from "./pages/Basket";
+import Shop from "./pages/Shop";
+import Auth from "./pages/Auth";
+import Main from "./pages/Main";
+import DevicePage from "./pages/DevicePage";
+import Private from "./pages/Private";
+import Private2 from "./pages/Private2";
+
+export const authRoutes = [
+	{
+		path: ADMIN_ROUTE,
+		Component: Admin
+	},
+	{
+		path: BASKET_ROUTE,
+		Component: Basket
+	},
+	{
+		path: MAIN_ROUTE,
+		Component: Main
+	},
+	
+]
+
+export const publicRoutes = [
+	{
+		path: SHOP_ROUTE,
+		Component: Shop
+	},
+	{
+		path: LOGIN_ROUTE,
+		Component: Auth
+	},
+	{
+		path: REGISTRATION_ROUTE,
+		Component: Auth
+	},
+	{
+		path: DEVICE_ROUTE + '/:id',
+		Component: DevicePage
+	},
+	{
+		path: MAIN_ROUTE,
+		Component: Main
+	},
+	{
+		path: PRIVATE_ROUTE,
+		Component: Private
+	},
+	{
+		path: PRIVATE_ROUTE2,
+		Component: Private2
+	},
+]
